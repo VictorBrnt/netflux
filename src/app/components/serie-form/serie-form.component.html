@@ -1,0 +1,88 @@
+<div class="row col-6 card shadow mx-auto mt-3 text-light">
+
+  <h3 class="mt-2 text-center">{{title}}</h3>
+
+  <form [formGroup]="serieForm" (ngSubmit)="onSubmitSerieForm()" class="my-3">
+
+    <div class="mb-3">
+      <label for="title">Titre</label>
+      <input
+        id="title"
+        formControlName="title"
+        class="form-control"
+        placeholder="Titre"
+        [(ngModel)]="serie.title">
+      <app-error-forms
+        [control]="this.serieForm.controls.title"
+        controlLabel="Titre"
+      ></app-error-forms>
+    </div>
+
+    <div class="mb-3">
+      <label for="Release">Date de sortie</label>
+      <input
+        id="release"
+        formControlName="release"
+        class="form-control"
+        placeholder="Date de sortie"
+        [(ngModel)]="serie.release">
+      <app-error-forms
+        [control]="this.serieForm.controls.release"
+        controlLabel="Date de sortie"
+      ></app-error-forms>
+    </div>
+
+    <div class="mb-3">
+      <label for="Season">Saison(s)</label>
+      <input
+        id="season"
+        formControlName="season"
+        class="form-control"
+        placeholder="Saisons"
+        [(ngModel)]="serie.season">
+      <app-error-forms
+        [control]="this.serieForm.controls.season"
+        controlLabel="Saisons"
+      ></app-error-forms>
+    </div>
+
+    <div class="mb-3">
+      <label for="Review">Critique</label>
+      <input
+        id="review"
+        formControlName="review"
+        class="form-control"
+        placeholder="Critique"
+        [(ngModel)]="serie.review">
+      <app-error-forms
+        [control]="this.serieForm.controls.review"
+        controlLabel="Critique"
+      ></app-error-forms>
+    </div>
+
+    <div class="mb-3">
+      <label for="Picture">Image</label>
+      <input
+        id="picture"
+        formControlName="picture"
+        class="form-control"
+        placeholder="Lien de l'image"
+        [(ngModel)]="serie.picture">
+      <app-error-forms
+        [control]="this.serieForm.controls.picture"
+        controlLabel="Image"
+      ></app-error-forms>
+    </div>
+
+
+    <div class="mb-3">
+      <button
+        type="submit"
+        class="d-grid col-4 btn btn-primary mx-auto"
+        [disabled]="serieForm.invalid"
+      >{{submitLabel}}</button>
+    </div>
+  </form>
+  <button class="btn btn-outline-danger"
+          routerLink="/home">Retour</button>
+</div>

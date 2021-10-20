@@ -1,0 +1,35 @@
+<div
+  *ngIf="control.invalid && control.errors && (control.dirty || control.touched)"
+  class="alert alert-danger mt-2"
+>
+  <div
+    *ngIf="control.errors.required">
+    Le champ {{controlLabel}} est requis.
+  </div>
+
+  <div
+    *ngIf="control.errors.minlength">
+    Le champ {{controlLabel}} doit avoir un minimum de {{control.errors.minlength.requiredLength}}
+    {{control.errors.minlength.requiredLength > 1 ? 'caractères' : 'caractère'}}
+  </div>
+
+
+  <div
+    *ngIf="control.errors.min">
+    Le champ {{controlLabel}} doit être compris entre 1950 et aujourd'hui {{control.errors.min.requiredMin}}
+  </div>
+
+  <div
+    *ngIf="control.errors.max">
+    Le champ {{controlLabel}} doit être compris entre 1950 et aujourd'hui {{control.errors.max.requiredMax}}
+  </div>
+
+
+  <div
+    *ngIf="control.errors.pattern">
+    Le champ {{controlLabel}} doit être un nombre.
+  </div>
+
+
+
+</div>

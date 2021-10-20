@@ -1,0 +1,19 @@
+<table class="table table-dark table-hover mt-5">
+  <thead class="table-">
+  <tr>
+    <th>ID</th>
+    <th>Titre</th>
+    <th>Date de sortie</th>
+    <th>Options</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr
+    app-serie-table-line
+    *ngFor="let serie of series"
+    [id]="serie.id"
+    [title]="serie.title"
+    [release]="serie.release">
+  </tr>
+  </tbody>
+</table>

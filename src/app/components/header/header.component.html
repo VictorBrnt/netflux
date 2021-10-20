@@ -1,0 +1,17 @@
+<div class="text-center py-3 container d-flex justify-content-between">
+  <div>
+    <h1 class="text-danger">NETFLUX</h1>
+  </div>
+  <div>
+    <button
+      *ngIf="isConnected && !isAddPage"
+      class="btn btn-danger"
+      routerLink="/series/new">
+      AJOUTER
+    </button>
+    <button
+      *ngIf="isConnected"
+      (click)="onClickSignOut()"
+      class="btn btn-danger ms-2">DECONNEXION</button>
+  </div>
+</div>

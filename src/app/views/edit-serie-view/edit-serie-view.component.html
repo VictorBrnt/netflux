@@ -1,0 +1,8 @@
+<app-serie-form
+  *ngIf="serie"
+  title="EDITER UNE SERIE"
+  submitLabel="EDITER"
+  [serieToEdit]="serie"
+  (formSubmitted)="askToEditSerie($event)"
+></app-serie-form>
+

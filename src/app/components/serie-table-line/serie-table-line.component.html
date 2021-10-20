@@ -1,0 +1,16 @@
+<td>{{id}}</td>
+<td>{{title}}</td>
+<td>{{release}}</td>
+<td>
+  <div>
+    <button
+      [routerLink]="['/series', id]"
+      class="btn btn-primary me-2">Voir plus</button>
+    <button
+      [routerLink]="['/series', id, 'edit']"
+      class="btn btn-danger me-2">Editer</button>
+    <button
+      (click)="deleteSerie()"
+      class="btn btn-outline-danger">Supprimer</button>
+  </div>
+</td>

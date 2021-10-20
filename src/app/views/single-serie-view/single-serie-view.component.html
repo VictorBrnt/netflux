@@ -1,0 +1,22 @@
+<div class="container text-light">
+  <div class="card ">
+    <div class="d-flex mt-2 ms-2">
+      <img src="{{serie?.picture}}" style="width: 24rem;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">{{serie?.title}}</h3>
+        <h3 class="card-title">{{serie?.release}} - {{serie?.season}}saison(s)</h3>
+        <p class="card-text">{{serie?.review}}</p>
+      </div>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item">{{serie?.commentmodel}}</li>
+    </ul>
+  </div>
+
+  <app-commentary-form></app-commentary-form>
+
+  <div class="text-center my-5">
+    <button routerLink="/"  class="btn btn-danger">RETOUR</button>
+  </div>
+</div>
